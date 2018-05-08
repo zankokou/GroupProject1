@@ -1,0 +1,89 @@
+body{
+    background-image: url(../images/mountain2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+.container{
+    background: rgba(245, 245, 220, 0.4);
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    color: black;
+    
+}
+
+.z-depth-3{
+    background:rgba(245, 245, 220, 0.7)
+}
+
+.imageC1{
+    border: 1px solid beige;
+    width: 400px;
+}
+
+img{
+    border: 2px solid beige ;
+}
+
+#zipcode-input:focus, #city-input:focus {
+    border-bottom: 1px solid bisque;
+    box-shadow: 0 1px 0 0 beige ;
+}
+
+
+.searchBox{
+    margin-top: 30px;
+
+}
+
+.carousel-item{
+    margin-top: -50px;
+    min-width: 400px;
+}
+
+.modal-search{
+    text-align: center;
+}
+
+#messageArea{
+    height: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+#chat{
+    max-width: 500px;
+    margin: 10px auto;
+    /* border: 1px solid #ccc; */
+
+  }
+
+.chatImage{
+    width: 100%;   
+}
+
+.user-view{
+    height: 200px;
+}
+
+#nameInput{
+    border-top: 1px solid #9e9e9e;
+    
+}
+
+#nameInput:focus{
+    border-bottom: 1px solid#2962ff;
+}
+
+.chatIcon{
+    padding: 5px 10px 5px 10px;
+    margin: 15px;
+}
+
+.placeInfo{
+    text-align: left;
+}

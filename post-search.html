@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Project 1 - Adventure GO! - Post Search</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> 
+
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/database.js"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO9gxNVvg9CiM8dhQLlDsCpmsG5vylzBk&libraries=places&callback=initMap" async defer></script> -->
+ 
+</head>
+<body>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img class="chatImage" src="assets/Images/hk.jpg">
+                </div>
+                <img class="circle" src="assets/Images/hills.jpg">
+                <h5 class="white-text center">Welcome to Adventure Go! </h5>
+                <h5 class="white-text center">Come Chat with Us! </h5>
+
+            </div>
+        </li>
+        <li>
+            <div class="amber lighten-5" id="messageArea">Adventure Go! Chat Box</div>
+            <form class="center" id="chat">
+                <div class="row">
+                    <label>
+                        <input class="center" id='nameInput' placeholder='name'></input>
+                    </label>
+                    <label>
+                        <textarea class="center" id='messageInput' placeholder='Message'></textarea> </label>
+
+                </div>
+                <input type="submit" class="center waves-effect waves-light btn-large orange lighten-5 z-depth-3" id="send"></input>
+
+            </form>
+        </li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger">
+        <i class="small material-icons btn orange lighten-4 chatIcon">chat_bubble_outline</i>
+    </a>
+
+    <!-- This is to display the Place information-->
+        <div class = "container">
+                <p id="title"></p>
+                <section  id="cityInfo">
+                </section>
+        </div>                  
+    <div id="map"></div>
+    <!-- This is to display the Place information-->
+
+
+    <div class="fixed-action-btn">
+        <a class="waves-effect waves-light btn modal-trigger orange lighten-4" id="modalOne" href="#modal1">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+    </div>
+
+    <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+                <form class="modal-search">
+                    <h4>Choose Another Destination</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon"> </span>
+                        <input type="text" class="form-control center underline" id="city-input" placeholder="Enter City">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"> </span>
+                        <input type="text" class="form-control center underline" id="zipcode-input" placeholder="Enter Zipcode">
+                    </div>        
+                    <input type="submit" class="waves-effect waves-light btn-large orange lighten-5 z-depth-3" id="submit-button" value="Travel"/>
+                </form>
+            </div>
+            <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div> 
+
+        <!-- Script -->
+        <script src="assets/javascript/app.js"></script>
+        <script src="assets/javascript/googleplaces.js"></script>
+
+</body>
+
+</html>

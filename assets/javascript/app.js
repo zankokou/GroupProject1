@@ -28,6 +28,16 @@ $(document).ready(function () {
       location.href = "./post-search.html";
       city = $('#city-input').val().trim();
       zip = $('#zipcode-input').val().trim();
+      
+      if(zip.length != 5){
+        alert("Enter a valid zipcode");
+      };
+
+
+      if(city.length === 0){
+        alert("Enter a valid city");
+        return;
+      };
 
    
       console.log(city);
@@ -87,5 +97,5 @@ $(document).ready(function () {
   });//ready
 
 
-  //add in temperature Ajax
+  //add in temperature Ajax - top right corner
   //

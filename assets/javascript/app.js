@@ -29,6 +29,7 @@ $(document).ready(function () {
       city = $('#city-input').val().trim();
       zip = $('#zipcode-input').val().trim();
 
+   
       console.log(city);
       console.log(zip);
   
@@ -67,7 +68,8 @@ $(document).ready(function () {
       };
   
       database.ref().push(newUser);
-  
+      
+      chat.preventDefault();
     });
     function chat() {
       database.ref().on('child_added', function (childSnapshot, prevChildkey) {
@@ -78,4 +80,12 @@ $(document).ready(function () {
     };
     chat();  
  //   initMap();
+
+
+
+ 
   });//ready
+
+
+  //add in temperature Ajax
+  //

@@ -25,16 +25,18 @@ $(document).ready(function () {
     var queryURL = "";
   
     $('#submit-button').on('click', function (event) {
-  
+      location.href = "./post-search.html";
       city = $('#city-input').val().trim();
       zip = $('#zipcode-input').val().trim();
+
       console.log(city);
       console.log(zip);
   
       localStorage.setItem("city", city);
       localStorage.setItem("zipcode", zip);
   
-      //event.preventDefault();
+       
+      event.preventDefault();
       });
   
     

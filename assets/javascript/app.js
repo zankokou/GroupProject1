@@ -57,6 +57,7 @@ $(document).ready(function () {
     $('.carousel').carousel();
     $('.modal').modal();
     $('.sidenav').sidenav();
+    
 
   
     var cityInput = localStorage.getItem("city");
@@ -96,6 +97,3 @@ $(document).ready(function () {
  
   });//ready
 
-
-  //add in temperature Ajax - top right corner
-  //

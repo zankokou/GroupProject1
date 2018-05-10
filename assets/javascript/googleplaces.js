@@ -149,7 +149,7 @@
         }
 
         //Get Photos
-        var divImg = $("<div class='col s6 attactionImage carousel'>");
+        var divImg = $("<div class='col s5 offset-s1 attractionImage carousel'>");
         for(i=0; i< place.photos.length; i++) {
             var aCarousel = $("<a class='carousel-item' href='"+ arrCarousel[i] +"'>");
 //            var placeImg = $("<img class='responsive-img right materialboxed imageC1'>").attr("src", place.photos[i].getUrl({maxHeight: 300}));

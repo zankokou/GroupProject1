@@ -30,13 +30,13 @@
                     <img class="chatImage" src="assets/images/hk.jpg">
                 </div>
                 <img class="circle" src="assets/images/hills.jpg">
-                <h5 class="white-text center">Welcome to Adventure Go! </h5>
+                <h5 class="white-text center">Welcome to Explore Places! </h5>
                 <h5 class="white-text center">Come Chat with Us! </h5>
 
             </div>
         </li>
         <li>
-            <div class="amber lighten-5" id="messageArea">Adventure Go! Chat Box</div>
+            <div class="amber lighten-5" id="messageArea">Chat Box</div>
             <form class="center" id="chat">
                 <div class="row">
                     <label>
@@ -51,29 +51,26 @@
             </form>
         </li>
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger">
+    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
         <i class=" small material-icons btn orange lighten-4 chatIcon ">chat_bubble_outline</i>
-    </a>
+    </a> -->
 
     <!-- This is to display the Place information-->
         <div class = "container">
                 <p id="title"></p>
                 <section  id="cityInfo">
 
-                    <div id="temp"></div>
-                    <img src="assets/images/weather.ico">
-                    <div id="description"></div>
+                    <div class="weatherBox right" >
+                        <img id="weather"src="assets/images/weather2.png">
+                        <div class="white-text" id="temp"></div>
+                        <div class="white-text" id="description"></div>
+
+                    </div>
                 </section>
         </div>                  
     <div id="map"></div>
     <!-- This is to display the Place information-->
 
-
-    <div class="fixed-action-btn">
-        <a class="waves-effect waves-light btn modal-trigger orange lighten-4" id="modalOne" href="#modal1">
-            <i class="large material-icons">mode_edit</i>
-        </a>
-    </div>
 
     <div id="modal1" class="modal bottom-sheet">
             <div class="modal-content">
@@ -95,6 +92,17 @@
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div> 
+
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">dehaze</i>
+            </a>
+            <ul>
+              <li><a href="#" data-target="slide-out" class="btn-floating green sidenav-trigger"><i class="material-icons">chat_bubble_outline</i></a></li>
+              <li><a class="btn-floating blue modal-trigger" href="#modal1"><i class="material-icons">mode_edit</i></a></li>
+            </ul>
+          </div>
+
 
         <!-- Script -->
         <script src="assets/javascript/app.js"></script>

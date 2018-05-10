@@ -88,3 +88,47 @@ img{
 .placeInfo{
     text-align: left;
 }
+
+#weather{
+    height: 100px;
+    margin-top: -85px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+.weatherBox{
+    position: relative;
+    margin-bottom: -50px;
+}
+
+.weatherBox #temp{
+position:relative;
+bottom:30px;
+left:0px;
+visibility:hidden;
+}
+
+  
+.weatherBox:hover #temp{
+    visibility:visible;
+}
+
+.weatherBox #description{
+    position:relative;
+    bottom:30px;
+    left:0px;
+    visibility:hidden;
+    }
+    
+    
+.weatherBox:hover #description{
+    visibility:visible;
+
+}
+
+.white-text{
+    margin-top: -5px;
+    font-weight: bolder;
+    font-size: 18px;
+    top: -75px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #b3e5fc;}

@@ -35,7 +35,7 @@ $(document).ready(function () {
   });
 
   function UserValidation(city, zip){
-  	if(((city = "") || (/[a-z]/i.test(city))) && ((zip.length != 5 || !(/^\d+$/.test(zip)))))
+    if((city == "") && (zip.length != 5))
 		{
   		alert("enter a valid input");
   		return false;

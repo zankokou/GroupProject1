@@ -5,6 +5,16 @@ body{
     color: black;
 }
 
+h2{
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    color:blue;
+}
+h4{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    color: blue;
+}
 .container{
     background: rgba(245, 245, 220, 0.4);
     text-align: center;
@@ -14,8 +24,19 @@ body{
     
 }
 
+.fontClass{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .z-depth-3{
-    background:rgba(245, 245, 220, 0.7)
+    background:rgba(245, 245, 220, 0.7);
+}
+input[type=submit] {
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    color: blue;
 }
 
 .imageC1{

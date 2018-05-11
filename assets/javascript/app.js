@@ -13,19 +13,11 @@ $(document).ready(function () {
   var queryURL = "";
 
   $('#submit-button').on('click', function (event) {
-    location.href = "./post-search.html";
+    
     city = $('#city-input').val().trim();
     zip = $('#zipcode-input').val().trim();
-
-    if (zip.length != 5) {
-      alert("Enter a valid zipcode");
-    };
-
-
-    if (city.length === 0) {
-      alert("Enter a valid city");
-      return;
-    };
+    if(UserValidation(city, zip)){
+	location.href = "./post-search.html";
 
 
     console.log(city);
@@ -36,10 +28,21 @@ $(document).ready(function () {
 
 
     event.preventDefault();
+	}
+	else{
+	event.preventDefault();
+	}
   });
 
+  function UserValidation(city, zip){
+  	if(((city = "") || (/[a-z]/i.test(city))) && ((zip.length != 5 || !(/^\d+$/.test(zip)))))
+		{
+  		alert("enter a valid input");
+  		return false;
+		}
+  	return true;
+   };
 
-  //materialize initialization functions
   $('.materialboxed').materialbox();
   $('.fixed-action-btn').floatingActionButton();
   $('.carousel').carousel();

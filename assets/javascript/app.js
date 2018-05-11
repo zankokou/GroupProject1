@@ -37,7 +37,9 @@ $(document).ready(function () {
   function UserValidation(city, zip){
     if((city == "") && (zip.length != 5))
 		{
-  		alert("enter a valid input");
+      // alert("enter a valid input");
+      $('#modal2').modal('open');
+
   		return false;
 		}
   	return true;
@@ -81,8 +83,6 @@ $(document).ready(function () {
     })
   };
   chat();
-
-
 
 
 });//ready

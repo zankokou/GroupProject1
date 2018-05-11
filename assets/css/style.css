@@ -5,6 +5,14 @@ body{
     color: black;
 }
 
+h2{
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+}
+h4{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+}
 .container{
     background: rgba(245, 245, 220, 0.4);
     text-align: center;

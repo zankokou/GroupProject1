@@ -41,19 +41,19 @@
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
         location: searchPlace,
-        radius: 1000000,
+        radius: 5000,
         type: ['park']
         }, callback);
         console.log("calling parks");
         service.nearbySearch({
         location: searchPlace,
-        radius: 100000,
+        radius: 5000,
         type: ['restaurants']
         }, callback);
         console.log("restaurants");
         service.nearbySearch({
         location: searchPlace,
-        radius: 100000,
+        radius: 5000,
         type: ['museum']
         }, callback);
         console.log("museum");
@@ -80,17 +80,17 @@
 
         if(city !== "" && typeof city !== 'undefined'){
             console.log("Setting City: " + city +" --Length "+ city.length);
-            $("#title").append("<h3>Search Results for " + city + "</h3>");
+            $("#title").append("<h4>WanderList for " + city + "</h4>");
             return city;
         }
         if(zipcode !== "" && typeof zipcode !== 'undefined'){
             console.log("setting zipcode: " + zipcode);
-            $("#title").append("<h3>Search Results for Zipcode " + zipcode + "</h3>");
+            $("#title").append("<h4>WanderList for " + zipcode + "</h4>");
             return zipcode;
         }
         else{
             //Send default city
-            return "chicago";
+            return "Chicago";
         }
             
     }

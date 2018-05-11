@@ -41,19 +41,19 @@
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
         location: searchPlace,
-        radius: 1000000,
+        radius: 5000,
         type: ['park']
         }, callback);
         console.log("calling parks");
         service.nearbySearch({
         location: searchPlace,
-        radius: 100000,
+        radius: 5000,
         type: ['restaurants']
         }, callback);
         console.log("restaurants");
         service.nearbySearch({
         location: searchPlace,
-        radius: 100000,
+        radius: 5000,
         type: ['museum']
         }, callback);
         console.log("museum");

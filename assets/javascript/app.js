@@ -1,12 +1,9 @@
 
 // Regular form code ##############################33
 
-$(document).ready(function () {
-  console.log("Loading Document load");
-  
+$(document).ready(function () {  
  
   var database = Firebase_Database();
-
   //API key AIzaSyDxI6cMDI1nHohhOXMbQ7MUDi1GZKJ4KVM
   var city = "";
   var zip = "";
@@ -14,30 +11,24 @@ $(document).ready(function () {
 
   $('#submit-button').on('click', function (event) {
     
-    city = $('#city-input').val().trim();
-    zip = $('#zipcode-input').val().trim();
-    if(UserValidation(city, zip)){
-	location.href = "./post-search.html";
+      city = $('#city-input').val().trim();
+      zip = $('#zipcode-input').val().trim();
+      if(UserValidation(city, zip)){
+        location.href = "./post-search.html";
 
+        localStorage.setItem("city", city);
+        localStorage.setItem("zipcode", zip);
 
-    console.log(city);
-    console.log(zip);
-
-    localStorage.setItem("city", city);
-    localStorage.setItem("zipcode", zip);
-
-
-    event.preventDefault();
-	}
-	else{
-	event.preventDefault();
-	}
+        event.preventDefault();
+    }
+    else{
+      event.preventDefault();
+    }
   });
 
   function UserValidation(city, zip){
     if((city == "") && (zip.length != 5))
 		{
-      // alert("enter a valid input");
       $('#modal2').modal('open');
 
   		return false;
@@ -51,26 +42,18 @@ $(document).ready(function () {
   $('.modal').modal();
   $('.sidenav').sidenav();
 
-
-
   var cityInput = localStorage.getItem("city");
   var zipcodeInput = localStorage.getItem("zipcode");
 
-  console.log("cityInput: " + cityInput);
-  console.log("zip code Input: " + zipcodeInput);
-
   //chat
   $('#send').on('click', function (chat) {
-    console.log('working');
     var name = $('#nameInput').val();
     var message = $('#messageInput').val();
-    console.log(message);
 
     var newUser = {
       name: name,
       message: message
     };
-
     database.ref().push(newUser);
 
     chat.preventDefault();
@@ -83,7 +66,5 @@ $(document).ready(function () {
     })
   };
   chat();
-
-
 });//ready
 

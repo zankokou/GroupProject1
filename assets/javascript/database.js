@@ -1,5 +1,4 @@
 function Firebase_Database(){
-    console.log("Initialing Database");
     var config = {
         apiKey: "AIzaSyAIZCRtbY-yDsNgWwNYeK_i8J0OITsvWFM",
         authDomain: "adventurego-98977.firebaseapp.com",
